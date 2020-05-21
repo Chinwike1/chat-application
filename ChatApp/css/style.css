@@ -1,0 +1,141 @@
+.chatContainer {
+  position: relative;
+  height: 80vh;
+  width: 60%;
+  margin-top: 80px;
+}
+
+.navigation {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.input-section {
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  top: 86.6%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  background-color: #9b9ea4;
+}
+
+.name {
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.messageInput {
+  flex: 2;
+  margin-right: 20px;
+}
+.sendBtn {
+  margin-right: 20px;
+}
+
+.sendBtn {
+  height: 45px;
+  width: 45px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.chat-body-begins {
+  background-color: #3D0B37;
+  height: 60vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Message Stylings */
+.message {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.6fr;
+  grid-template-areas:
+  "message-head message-head message-head"
+  "message-body message-body timestamp";
+  background-color: #C49991;
+  color: white;
+  text-align: left;
+  border-radius: 15px;
+  padding: 0.8em;
+  margin-bottom: 0.5rem;
+  max-width: 35%;
+  cursor: pointer;
+}
+
+.message-delete {
+  background-color: rgb(149, 157, 179);
+}
+.message-delete::after {
+  content: '';
+  background-color: rgb(149, 157, 179);
+}
+
+.message-head {
+  font-weight: bold;
+  grid-area: message-head;
+}
+
+.message-body {
+  margin-top: 0.3rem;
+  line-height: 1.1;
+  grid-area: message-body;
+}
+
+.timestamp {
+  font-size: 0.79rem;
+  grid-area: timestamp;
+  align-self: end;
+  margin-left: auto;
+}
+
+
+/* Message send*/
+.message-send {
+  margin-left: auto;
+  text-align: left;
+}
+
+.custom-input {
+  padding-left: 1.5rem;
+}
+
+i.fa {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px){
+  .chatContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .chatContainer{
+    width: 90%;
+  }
+  .input-section {
+    justify-content: space-between;
+  }
+  .name {
+    flex: 1;
+  }
+  .messageInput {
+    flex: 2;
+  }
+  .sendBtn {
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .chatContainer{
+    width: 60%;
+  }
+}
